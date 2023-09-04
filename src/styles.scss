@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/primeng.css";
+@import "node_modules/primeflex/primeflex.css";
+@import "primeicons/primeicons.css";
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+body {
+  background-color: rgb(243, 247, 255);
+  font-family: var(--font-family);
+}
+
+.card-menu {
+  top: 0 !important;
+  left: 30px !important;
+}
+
+.owl-carousel {
+  .owl-item {
+    z-index: 999;
+  }
+
+  .owl-nav {
+    color: aqua !important;
+    background-color: aqua !important;
+  
+    .owl-prev , .owl-next {
+      height: 40px;
+      width: 40px;
+      display: flex !important;
+      cursor: pointer;
+      position: absolute;
+      top: 200px !important;
+      font-size: 25px !important;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50% !important;
+    }
+  
+    .owl-prev {
+      left: -35px;
+    }
+    .owl-next {
+      right: -35px;
+    }
+  }
+}
