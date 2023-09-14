@@ -1,0 +1,137 @@
+.card {
+  box-shadow: 0px 10px 30px rgb(0, 0, 0, 0.2);
+  border-radius: 20px;
+  height: 330px;
+
+  .task-title {
+    word-break: break-word;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    // h4
+    // {
+    //   background-image: linear-gradient(to right ,#000000 80%,rgba(0,0,0,0));
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
+  }
+  .card-action-buttons-container {
+    position: relative;
+  }
+
+  .card-body {
+
+    button {
+      padding: 5px 20px;
+      border-radius: 15px;
+      background-color: rgb(224, 221, 221);
+      box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.4);
+      border: none;
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.7);
+        background-color: rgb(224, 221, 221) !important;
+      }
+    }
+  }
+
+  i {
+    padding: 0px;
+    border-radius: 0px;
+    color: gray;
+    background-color: white;
+    font-size: 20px;
+    border: transparent;
+    box-shadow: none;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+@media screen and (max-width:568px)
+{
+  .card{
+    height: 280px;
+ 
+    h4
+    {
+      font-size: 17px;
+    }
+  }
+  .card-body
+  {
+    h6
+    {
+      font-size: 13px;
+    }
+    button 
+    {
+      font-size: 12px ;
+      padding: 4px 10px !important;
+    }
+  }
+
+}
+
+
+@media screen and (min-width:569px) and (max-width:768px)
+{
+  .card{
+    height: 280px;
+    h4
+    {
+      font-size: 20px;
+    }
+  }
+  .card-body
+  {
+    h6
+    {
+      font-size: 16px;
+    }
+    button 
+    {
+      font-size: 16px ;
+      padding: 4px 10px ;
+    }
+  }
+
+
+}
+
+@media screen and (min-width:769px) and (max-width:992px)
+{
+  .card{
+    height: 280px;
+    h4
+    {
+      font-size: 25px;
+    }
+  }
+  .card-body
+  {
+    h6
+    {
+      font-size: 16px;
+    }
+    button 
+    {
+      font-size: 16px ;
+      padding: 4px 10px ;
+    }
+  }
+}
+
+
+@media screen and (min-width:993px) 
+{
+
+}

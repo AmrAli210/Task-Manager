@@ -1,22 +1,4 @@
-<div class="w-50 mt-5 container">
-    <h1 class="text-center"> Create Task</h1>
-  <form *ngIf="taskInfo" [formGroup]="taskInfo" (ngSubmit)="Submit()">
-    <label for="title">Title:</label>
-    <input
-      formControlName="title"
-      class="form-control"
-      type="text"
-      placeholder="Task Title"
-    />
-    <label for="description">Description:</label>
-    <input
-      formControlName="description"
-      class="form-control"
-      type="text"
-      placeholder="Description"
-    />
-    <div class="d-flex justify-content-end">
-      <button type="submit">Save</button>
-    </div>
-  </form>
+<div class="w-50 mt-5 container create-task">
+<h1 class="text-center"> Create Task</h1>
+<app-task-from  ></app-task-from>
 </div>

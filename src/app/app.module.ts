@@ -1,17 +1,16 @@
+import { TaskFromModule } from './shared/components/task-from/task-from.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CardModule } from './shared/components/card/card.module';
+import { TasksCardModule } from './shared/components/tasks-card/tasks-card.module';
 import { CreateTaskModule } from './Modules/create-task/create-task.module';
-import { DeleteTaskModule } from './shared/components/delete-task/delete-task.module';
-import { NavBarModule } from './Modules/nav-bar/nav-bar.module';
 import { UpdateTaskModule } from './Modules/update-task/update-task.module';
 import { HomeModule } from './views/home/home.module';
 import { CreateTaskServiceService } from './shared/services/create-task-service.service';
-import { CarouselCardModule } from './shared/components/carousel-card/carousel-card.module';
+import { tasksCarouselModule } from './Modules/tasks-carousel/tasks-carousel.module';
 import { DatePipe } from '@angular/common';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,13 +22,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    CardModule,
+    TasksCardModule,
     CreateTaskModule,
-    DeleteTaskModule,
-    NavBarModule,
     UpdateTaskModule,
     HomeModule,
-    CarouselCardModule,
+    tasksCarouselModule,
+    TaskFromModule,
     NgbModule,
   ],
   providers: [CreateTaskServiceService, DatePipe, MessageService],

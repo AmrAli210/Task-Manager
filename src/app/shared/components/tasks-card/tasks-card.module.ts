@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from './card.component';
+import { TasksCardComponent } from './tasks-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+
+
 
 @NgModule({
-  declarations: [CardComponent],
+  declarations: [TasksCardComponent],
   imports: [
     CommonModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
     ButtonModule,
     MenuModule,
+    ConfirmDialogModule,
   ],
-  exports: [CardComponent],
+  exports: [TasksCardComponent],
 })
-export class CardModule {}
+export class TasksCardModule {}

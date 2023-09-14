@@ -1,0 +1,27 @@
+<div class="card p-3" *ngIf="taskInfo" >
+    <div class="card-title d-flex justify-content-between">
+       <div class="task-title d-flex  ">
+        <h4 >{{taskInfo.title}} </h4>
+       </div>
+        <div  class="opt-btn card-action-buttons-container">
+            <p-menu #menu [model]="items" [popup]="true" styleClass="card-menu" [autoZIndex]="true"></p-menu>
+            <i pButton (click)="menu.toggle($event)" class="pi pi-ellipsis-v" ></i>
+        </div>
+    </div>
+             <p-confirmDialog #cd >
+                <ng-template pTemplate="footer">
+                    <button type="button" pButton icon="pi pi-times" label="No" (click)="cd.reject()"></button>
+                    <button type="button" pButton icon="pi pi-check" label="Yes" (click)="cd.accept()"></button>
+                </ng-template>
+             </p-confirmDialog>   
+            
+    <div class="card-body ">
+        <p class="faded">{{taskInfo.description}}</p>
+        <h6>Created : {{taskInfo.date}} </h6>
+        <h6>Updated : {{taskInfo.newDate}} </h6>
+        <div class="btns mt-4 d-flex justify-content-evenly">
+            <button (click)="goPrev()" *ngIf="firstPhase"> Prev.</button>
+            <button *ngIf="lastPhase" (click)="goNext()"> Next</button>
+        </div>
+    </div>
+</div>

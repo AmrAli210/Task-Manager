@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UpdateTaskComponent } from './update-task.component';
+import { TaskFromModule } from 'src/app/shared/components/task-from/task-from.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +11,9 @@ import { UpdateTaskComponent } from './update-task.component';
     UpdateTaskComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TaskFromModule,
+    ReactiveFormsModule,
   ],
   exports:[UpdateTaskComponent],
 })

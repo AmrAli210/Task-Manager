@@ -1,0 +1,60 @@
+button {
+    padding: 5px 20px;
+    border-radius: 15px;
+    background-color: rgb(224, 221, 221);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.4);
+    border: none;
+    margin-top: 2rem;
+    transition: all 0.5s;
+  
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.7);
+    }
+  }
+  
+  label {
+    margin-top: 2rem;
+  }
+  
+  input {
+  
+      margin-top: 10px;
+    &:focus {
+      box-shadow: 0 0  10px rgb(0, 0, 0,0.2);
+      border: 1px solid transparent;
+    }
+  
+    &.ng-touched , &.ng-invalid {
+      border:1px soild red;
+    }
+  }
+
+  @media screen and (max-width:568px)
+{
+  button
+  {
+    font-size: 15px;
+    padding: 7px 13px;
+  }
+
+}
+
+
+@media screen and (min-width:569px) and (max-width:768px)
+{
+
+}
+
+
+@media screen and (min-width:769px) and (max-width:992px)
+{
+
+}
+
+
+@media screen and (min-width:993px) 
+{
+
+}
+  

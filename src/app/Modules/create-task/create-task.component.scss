@@ -1,31 +1,32 @@
-button {
-  padding: 5px 20px;
-  border-radius: 15px;
-  background-color: rgb(224, 221, 221);
-  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.4);
-  border: none;
-  margin-top: 2rem;
-  transition: all 0.5s;
-
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.7);
+@media screen and (max-width: 568px) {
+  .create-task {
+    width: 75% !important;
+  }
+  h1
+  {
+    font-size:25px ;
   }
 }
 
-label {
-  margin-top: 2rem;
+@media screen and (min-width: 569px) and (max-width: 768px) {
+    .create-task {
+        width: 75% !important;
+      }
+      h1
+      {
+        font-size:30px ;
+      }
 }
 
-input {
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .create-task {
+        width: 75% !important;
+      }
+   
+}
 
-    margin-top: 10px;
-  &:focus {
-    box-shadow: 0 0  10px rgb(0, 0, 0,0.2);
-    border: 1px solid transparent;
-  }
-
-  .ng-untouched {
-    background-color: red;
+@media screen and (min-width: 993px) {
+      .create-task {
+    width: 80% !important;
   }
 }
