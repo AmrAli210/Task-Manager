@@ -13,7 +13,7 @@ export class CreateTaskServiceService {
   doneStorage = JSON.parse(localStorage.getItem('doneTasksData')!);
 
   constructor() {
-    this.taskDetails = JSON.parse(localStorage.getItem('data')!);
+    // this.taskDetails = JSON.parse(localStorage.getItem('data')!);
   }
 
   addInfo(taskDetails: ItaskInfo) {

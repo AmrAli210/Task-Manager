@@ -8,12 +8,13 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./tasks-carousel.component.scss'],
 })
 export class tasksCarouselComponent implements OnInit {
-  drafts: ItaskInfo[] = [];
+
+  drafts:ItaskInfo[]=[];
   inProgress: ItaskInfo[] = [];
   reviews: ItaskInfo[] = [];
   doneItem: ItaskInfo[] = [];
 
-
+  mainArray: ItaskInfo[][]=[]
 
   draftsStorage = JSON.parse(localStorage.getItem('data')!);
   inprogressStorage = JSON.parse(localStorage.getItem('inprogressData')!);
@@ -52,9 +53,17 @@ export class tasksCarouselComponent implements OnInit {
           items:4,
           nav: true,          
       },
-  }
-  };
-  myTypes: string[] = ['Drafts', 'In-progress', 'Reviews', 'Done'];
+  }};
+  // myTypes: string[] = ['drafts', 'inProgress', 'reviews', 'doneItem'];
+
+  myTypesConfig: {type: string, propName: string, localStorageName: string}[] = [
+
+    {type: 'Drafts', propName: 'drafts', localStorageName: 'data'},
+    {type: 'In-progress', propName: 'inProgress', localStorageName: 'inprogressData'},
+    {type: 'Review', propName: 'reviews', localStorageName: 'reviewsData'},
+    {type: 'Done', propName: 'doneItem', localStorageName: 'doneTasksData'},
+
+  ];
 
   ngOnInit() {
     if (this.draftsStorage != null) {
@@ -69,36 +78,52 @@ export class tasksCarouselComponent implements OnInit {
     if (this.doneStorage != null) {
       this.doneItem = this.doneStorage;
     }
+
+    this.mainArray.push(this.drafts)
+    this.mainArray.push(this.inProgress)
+    this.mainArray.push(this.reviews)
+    this.mainArray.push(this.doneItem)
+   
   }
 
   deleteItem(task: ItaskInfo) {
-    for (let i = this.drafts.length; i--; ) {
-      if (this.drafts[i].id === task.id) {
-        this.drafts.splice(i, 1);
-        localStorage.setItem('data', JSON.stringify(this.drafts));
-      }
-    }
 
-    for (let i = this.inProgress.length; i--; ) {
-      if (this.inProgress[i].id === task.id) {
-        this.inProgress.splice(i, 1);
-        localStorage.setItem('inprogressData', JSON.stringify(this.inProgress));
-      }
-    }
+    for(let i = 0 ; i < this.myTypesConfig.length; i++){
+      if(task.type === this.myTypesConfig[i].type){
+        
+        this[this.myTypesConfig[i].propName].splice(i, 1);
+        localStorage.setItem(this.myTypesConfig[i].localStorageName, JSON.stringify(this.myTypesConfig[i].propName));
 
-    for (let i = this.reviews.length; i--; ) {
-      if (this.reviews[i].id === task.id) {
-        this.reviews.splice(i, 1);
-        localStorage.setItem('reviewsData', JSON.stringify(this.reviews));
       }
     }
+    
+    // for (let i = this.drafts.length; ;i-- ) {
+    //   if (this.drafts[i].id === task.id) {
+    //     this.drafts.splice(i, 1);
+    //     localStorage.setItem('data', JSON.stringify(this.drafts));
+    //   }
+    // }
 
-    for (let i = this.doneItem.length; i--; ) {
-      if (this.doneItem[i].id === task.id) {
-        this.doneItem.splice(i, 1);
-        localStorage.setItem('doneTasksData', JSON.stringify(this.doneItem));
-      }
-    }
+    // for (let i = this.inProgress.length; i--; ) {
+    //   if (this.inProgress[i].id === task.id) {
+    //     this.inProgress.splice(i, 1);
+    //     localStorage.setItem('inprogressData', JSON.stringify(this.inProgress));
+    //   }
+    // }
+
+    // for (let i = this.reviews.length; i--; ) {
+    //   if (this.reviews[i].id === task.id) {
+    //     this.reviews.splice(i, 1);
+    //     localStorage.setItem('reviewsData', JSON.stringify(this.reviews));
+    //   }
+    // }
+
+    // for (let i = this.doneItem.length; i--; ) {
+    //   if (this.doneItem[i].id === task.id) {
+    //     this.doneItem.splice(i, 1);
+    //     localStorage.setItem('doneTasksData', JSON.stringify(this.doneItem));
+    //   }
+    // }
 
     // if(this.drafts.filter(draft=> draft.id == task.id))
     // {

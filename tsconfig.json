@@ -2,7 +2,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    // "suppressImplicitAnyIndexErrors": true,
+    "suppressImplicitAnyIndexErrors":true,
+    "ignoreDeprecations": "5.0",
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

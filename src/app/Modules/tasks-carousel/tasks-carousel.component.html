@@ -1,4 +1,21 @@
 
+<ng-container *ngFor="let taskArray of mainArray">
+  <div *ngIf="taskArray.length > 0" class="text-center resize mt-2">
+    <h3> {{taskArray[0].type}}</h3>
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let task of taskArray; let i = index">
+        <ng-template carouselSlide [width]="300">
+          <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+            <app-tasks-card (GoPrev)="goPrev($event,i)" (GoNext)="goNext($event,i)"  (onDeleteCard)="deleteItem($event)"  [taskInfo]="task"></app-tasks-card>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+  <hr class="w-50 m-auto"/>
+</ng-container>
+
+<!-- 
 <div class="text-center resize mt-2">
   <h3> Drafts</h3>
   <owl-carousel-o  [options]="customOptions">
@@ -11,6 +28,7 @@
     </ng-container>
   </owl-carousel-o>
 </div>
+<hr class="w-50 m-auto"/>
 
 
 <div class="text-center resize mt-2">
@@ -25,6 +43,8 @@
     </ng-container>
   </owl-carousel-o>
 </div>
+<hr class="w-50 m-auto"/>
+
 
 <div class="text-center resize mt-2">
   <h3> Review</h3>
@@ -38,6 +58,8 @@
     </ng-container>
   </owl-carousel-o>
 </div>
+<hr class="w-50 m-auto"/>
+
 
 <div class="text-center resize mt-2">
   <h3> Done</h3>
@@ -52,3 +74,4 @@
   </owl-carousel-o>
 </div>
 
+ -->

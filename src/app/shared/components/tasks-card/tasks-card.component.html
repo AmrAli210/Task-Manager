@@ -8,7 +8,7 @@
             <i pButton (click)="menu.toggle($event)" class="pi pi-ellipsis-v" ></i>
         </div>
     </div>
-             <p-confirmDialog #cd >
+             <p-confirmDialog #cd>
                 <ng-template pTemplate="footer">
                     <button type="button" pButton icon="pi pi-times" label="No" (click)="cd.reject()"></button>
                     <button type="button" pButton icon="pi pi-check" label="Yes" (click)="cd.accept()"></button>

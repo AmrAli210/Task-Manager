@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UpdateTaskComponent } from './update-task.component';
-import { TaskFromModule } from 'src/app/shared/components/task-from/task-from.module';
+import { TaskFromModule } from 'src/app/shared/components/task-form/task-form.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 

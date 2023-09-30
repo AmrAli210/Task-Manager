@@ -8,6 +8,6 @@ export interface ItaskInfo {
   index?:number;
 }
 
-export interface IcurrentCard {
+export interface child extends ItaskInfo {
 
 }

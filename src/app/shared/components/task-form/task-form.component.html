@@ -1,4 +1,4 @@
-<form *ngIf="taskInfo" [formGroup]="taskInfo" (ngSubmit)="submit()">
+<form [formGroup]="taskInfo" (ngSubmit)="submit()">
   <label for="title">Title:</label>
   <input
     formControlName="title"
@@ -14,8 +14,7 @@
     placeholder="Description"
   />
   <div class="d-flex justify-content-between">
-    <button (click)="cancel()" type="button">cancel</button>
+    <button (click)="router.navigate(['/'])" type="button">cancel</button>
     <button type="submit">Save</button>
-
   </div>
 </form>

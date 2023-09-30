@@ -1,4 +1,4 @@
-import { TaskFromModule } from './shared/components/task-from/task-from.module';
+import { TaskFromModule } from './shared/components/task-form/task-form.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
