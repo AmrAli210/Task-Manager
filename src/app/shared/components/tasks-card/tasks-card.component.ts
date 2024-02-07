@@ -29,9 +29,7 @@ export class TasksCardComponent implements OnInit {
   
   constructor(
     private router: Router,
-    private route: ActivatedRoute,
     private confirmationService: ConfirmationService,
-    private createService: CreateTaskServiceService
   ) {}
 
   ngOnInit() {
@@ -73,7 +71,7 @@ export class TasksCardComponent implements OnInit {
     this.confirmationService.confirm({
       message: '<h5> Delete Task ? <h5>',
       icon: 'pi pi-exclamation-triangle',
-      accept: () => {
+      accept: () => { 
         this.deleteItem();
       },
     });

@@ -96,65 +96,6 @@ export class tasksCarouselComponent implements OnInit {
 
       }
     }
-    
-    // for (let i = this.drafts.length; ;i-- ) {
-    //   if (this.drafts[i].id === task.id) {
-    //     this.drafts.splice(i, 1);
-    //     localStorage.setItem('data', JSON.stringify(this.drafts));
-    //   }
-    // }
-
-    // for (let i = this.inProgress.length; i--; ) {
-    //   if (this.inProgress[i].id === task.id) {
-    //     this.inProgress.splice(i, 1);
-    //     localStorage.setItem('inprogressData', JSON.stringify(this.inProgress));
-    //   }
-    // }
-
-    // for (let i = this.reviews.length; i--; ) {
-    //   if (this.reviews[i].id === task.id) {
-    //     this.reviews.splice(i, 1);
-    //     localStorage.setItem('reviewsData', JSON.stringify(this.reviews));
-    //   }
-    // }
-
-    // for (let i = this.doneItem.length; i--; ) {
-    //   if (this.doneItem[i].id === task.id) {
-    //     this.doneItem.splice(i, 1);
-    //     localStorage.setItem('doneTasksData', JSON.stringify(this.doneItem));
-    //   }
-    // }
-
-    // if(this.drafts.filter(draft=> draft.id == task.id))
-    // {
-    //   this.drafts.splice(this.drafts.indexOf(task),1)
-    // }
-    // if(this.inProgress.filter(ip=> ip.id == task.id))
-    // {
-    //   this.inProgress.splice(this.inProgress.indexOf(task),1)
-    // }
-    //  else if(task.id)
-    //   {
-    //     this.reviews.splice(index,1)
-    //   }
-    // else  if(task.id)
-    //   {
-    //     this.doneItem.splice(index,1)
-    //   }
-
-    // for (let type of this.myTypes) {
-    //   if (task.type == type) {
-    //   }
-    // }
-
-    // this.drafts.splice(index, 1),
-    // localStorage.setItem('data', JSON.stringify(this.drafts));
-    // this.inProgress.splice(index, 1),
-    // localStorage.setItem('inprogressData', JSON.stringify(this.inProgress));
-    // this.reviews.splice(index, 1),
-    // localStorage.setItem('reviewsData', JSON.stringify(this.reviewsStorage));
-    // this.doneStorage.splice(index, 1),
-    // localStorage.setItem('doneTasksData', JSON.stringify(this.doneStorage));
   }
 
   goNext(taskInfo: ItaskInfo, index: number) {
